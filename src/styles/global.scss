@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  /* 
+  *  Default
+  */
+  --primary: #336cfb;
+
+  /* 
+  *  Neutral Colors
+  */
+  --neutral-background: #f6f8fb;
+  --neutral-black: #25282b;
+  --neutral-gray-dark: #52575c;
+  --neutral-gray: #a0a4a8;  
+
+  @media (max-width: 1080px) {
+    html {
+      font-size: 93.75%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    html {
+      font-size: 87.5%;
+    }
+  }
+}
+
+body {
+  background-color: var(--neutral-background);
+}
