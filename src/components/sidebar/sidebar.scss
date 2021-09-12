@@ -1,8 +1,5 @@
-.container {
-  height: 100vh;
-}
-
-.sidebar {
+#sidebar {
+  grid-area: sidebar;
   margin: 0;
   padding: 0;
   width: 256px;
@@ -41,5 +38,31 @@
   .active {
     color: var(--primary);
     background-color: var(--neutral-background);
+  }
+}
+
+@media screen {
+  @media (min-width: 979px) {
+    .mobile-menu-button {
+      display: none;
+    }
+  }
+  @media (max-width: 978px) {
+    #sidebar {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      padding: 1.5rem;
+    }
+
+    .logo {
+      margin: 0;
+    }
+
+    .navigation {
+      display: none;
+    }
   }
 }

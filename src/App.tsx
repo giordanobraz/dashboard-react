@@ -1,10 +1,15 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Dashboard from "./pages/dashboard";
+import "./App.scss";
+import Content from "./components/content/content";
+import Sidebar from "./components/sidebar/sidebar";
 
 export default function App() {
   return (
     <Router>
-      <Dashboard />
+      <div className="container">
+        <Sidebar />
+        <Content />
+      </div>
     </Router>
   );
 }

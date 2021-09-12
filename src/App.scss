@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-areas: "sidebar content content";
+}
+
+@media screen {
+  @media (max-width: 978px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 1fr 1fr;
+      grid-template-areas: "sidebar" "content";
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      grid-template-columns: 0.6fr 1fr 1fr;
+    }
+  }
+}
