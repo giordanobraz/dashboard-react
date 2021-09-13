@@ -1,21 +1,15 @@
 .container {
-  display: grid;
   height: 100vh;
-  grid-template-areas: "sidebar content content";
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-areas: "sidebar content";
 }
 
 @media screen {
-  @media (max-width: 978px) {
+  @media (max-width: 768px) {
     .container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.3fr 1fr 1fr;
-      grid-template-areas: "sidebar" "content";
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .container {
-      grid-template-columns: 0.6fr 1fr 1fr;
+      display: flex;
+      flex-flow: column;
     }
   }
 }

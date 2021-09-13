@@ -1,15 +1,9 @@
 #sidebar {
   grid-area: sidebar;
-  margin: 0;
-  padding: 0;
-  width: 256px;
   background-color: white;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-  box-shadow: 4px 0px 16px #0a0a0a17;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
+  box-shadow: 4px 0px 16px #0a0a0a17;
 }
 
 .logo {
@@ -18,18 +12,26 @@
 }
 
 .navigation {
-  margin-top: 4rem;
+  margin-top: 32px;
+
+  .navigation-title {
+    font-size: 14px;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: var(--neutral-gray);
+  }
 
   a {
     display: flex;
     flex-flow: row nowrap;
     gap: 12px;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     color: var(--neutral-gray-dark);
     align-items: center;
     padding: 1rem;
+
     img {
       width: 28px;
     }
@@ -38,23 +40,27 @@
   .active {
     color: var(--primary);
     background-color: var(--neutral-background);
+
+    path {
+      fill: var(--primary);
+    }
   }
 }
 
 @media screen {
-  @media (min-width: 979px) {
+  @media (min-width: 769px) {
     .mobile-menu-button {
       display: none;
     }
   }
-  @media (max-width: 978px) {
+
+  @media (max-width: 768px) {
     #sidebar {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
-      width: 100%;
-      height: auto;
-      padding: 1.5rem;
+      padding: 1.2rem;
+      align-items: center;
     }
 
     .logo {
