@@ -49,7 +49,7 @@
 
 @media screen {
   @media (min-width: 769px) {
-    .mobile-menu-button {
+    .navbar_button {
       display: none;
     }
   }
@@ -57,18 +57,21 @@
   @media (max-width: 768px) {
     #sidebar {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       justify-content: space-between;
       padding: 1.2rem;
       align-items: center;
     }
 
-    .logo {
-      margin: 0;
+    .navigation {
+      width: 100%;
+      .navigation-title {
+        display: none;
+      }
     }
 
-    .navigation {
-      display: none;
+    .logo {
+      margin: 0;
     }
   }
 }

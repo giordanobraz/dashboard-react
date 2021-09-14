@@ -1,4 +1,8 @@
 import { ApexOptions } from "apexcharts";
+import imgEarnings from "../../assets/icons/bank.svg";
+import imgPatient from "../../assets/icons/crutch.svg";
+import imgMedkit from "../../assets/icons/medkit.svg";
+import imgOperation from "../../assets/icons/operation.svg";
 
 export const chart_survey_options_series = [
   {
@@ -64,3 +68,30 @@ export const chart_survey_options: ApexOptions = {
     curve: "smooth",
   },
 };
+
+export const cards_data = [
+  {
+    key: 1,
+    image: imgMedkit,
+    title: "Appointments",
+    value: 213,
+  },
+  {
+    key: 2,
+    image: imgPatient,
+    title: "New Patients",
+    value: 104,
+  },
+  {
+    key: 3,
+    image: imgOperation,
+    title: "Operations",
+    value: 24,
+  },
+  {
+    key: 4,
+    image: imgEarnings,
+    title: "Hospital Earnings",
+    value: "$ 12,174",
+  },
+];

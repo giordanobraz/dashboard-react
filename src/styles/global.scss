@@ -5,12 +5,13 @@
   font-family: "Lato", sans-serif;
 }
 
-:root { 
-  --primary: #336cfb;  
+:root {
+  --primary: #336cfb;
   --neutral-background: #f6f8fb;
   --neutral-black: #25282b;
   --neutral-gray-dark: #52575c;
   --neutral-gray: #a0a4a8;
+  --neutral-divider: #e8e8e8;
 
   @media (max-width: 1080px) {
     html {
@@ -25,6 +26,14 @@
   }
 }
 
-body { 
+body {
   background-color: var(--neutral-background);
+}
+
+#content {
+  grid-area: content;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+  gap: 2rem;
 }
