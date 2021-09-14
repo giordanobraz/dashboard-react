@@ -1,8 +1,12 @@
-import "./content.scss";
-
+import Chart from "react-apexcharts";
+import imgEarnings from "../../assets/icons/bank.svg";
 import imgPatient from "../../assets/icons/crutch.svg";
 import imgOperation from "../../assets/icons/operation.svg";
-import imgEarnings from "../../assets/icons/bank.svg";
+import {
+  chart_survey_options,
+  chart_survey_options_series,
+} from "./charts_options";
+import "./content.scss";
 
 export default function Content() {
   return (
@@ -40,6 +44,15 @@ export default function Content() {
             <span>$ 12,174</span>
           </div>
         </div>
+      </div>
+
+      <div className="charts">
+        <Chart
+          options={chart_survey_options}
+          series={chart_survey_options_series}
+          height={375}
+          type="area"
+        />
       </div>
     </main>
   );

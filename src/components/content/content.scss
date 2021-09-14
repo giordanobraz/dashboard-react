@@ -1,8 +1,8 @@
 #content {
   grid-area: content;
-  padding: 2rem;
   display: flex;
   flex-flow: column nowrap;
+  padding: 1rem;
   gap: 2rem;
 }
 
@@ -71,7 +71,26 @@
   }
 }
 
+.charts {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 8px hsl(0deg 0% 46% / 10%);
+}
+
+.double_charts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
 @media screen {
+  @media (max-width: 571px) {
+    .card {
+      width: 100%;
+    }
+  }
+
   @media (max-width: 787px) {
     .content_header {
       > input {
@@ -80,10 +99,6 @@
       > i {
         display: none;
       }
-    }
-
-    .card {
-      width: 100%;
     }
   }
 }
